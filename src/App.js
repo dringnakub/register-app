@@ -2,19 +2,15 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import LocationDropDown from './components/locationDropDown';
+import ThaiLocationSelectForm from './components/thaiLocationSelectForm'
 
 function App() {
-
-  let provinces = [
-    { name: 'Bangkok', id: 1 },
-    { name: 'Nonthaburi', id: 2 }
-  ]
 
 
   return (
     <div>
-      <LocationDropDown defaultLabel="จังหวัด" locations={provinces} />
+      {/* <LocationDropDown defaultLabel="จังหวัด" locations={provinces} /> */}
+      <ThaiLocationSelectForm />
     </div>
   );
 }
