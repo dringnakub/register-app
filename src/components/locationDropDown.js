@@ -8,8 +8,15 @@ class LocationDropDown extends Component {
 
     locationSelected(e) {
         let locationName = e.target.getAttribute('data-name')
-        this.setState({label: locationName})
+        this.setState({
+            label: locationName
+        })
         console.log("locationName", locationName)
+
+        if (this.props.selectedCallBack)// check undefined // null
+        {
+            this.props.selectedCallBack(locationName);
+        }
     }
 
     render() {
@@ -17,7 +24,7 @@ class LocationDropDown extends Component {
         const { locations, defaultLabel } = this.props;
         // let locations = this.props.locations;
         // let labelDufault = this.props.defaultLabel;
-        console.log(locations)
+        console.log("map ", locations)
         return (
             <div className="dropdown">
                 <a
